@@ -3,15 +3,15 @@
 /*
 Plugin Name: Category Checkbox Setting
 Plugin URI:
-Description: 
-Author: 
+Description: 親子関係のカテゴリーがある場合、チェックボックスの選択を連動させる。
+Author: matsui
 Version: 0.1
 Author URI: 
 */
 
 $category_checkbox_setting = new CategoryCheckboxSetting;
 class CategoryCheckboxSetting
-{	
+{
     public function __construct()
     {
 	    $this->debug = true;
@@ -43,6 +43,6 @@ class CategoryCheckboxSetting
 	 */
 	public function wp_terms_checklist_args( $args, $post_id = null ) {
 	    $args['checked_ontop'] = false;
-	    return $args;		
+	    return $args;
 	}
 }
