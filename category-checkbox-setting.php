@@ -9,7 +9,6 @@ Version: 0.1
 Author URI: 
 */
 
-
 $category_checkbox_setting = new CategoryCheckboxSetting;
 class CategoryCheckboxSetting
 {	
@@ -21,7 +20,9 @@ class CategoryCheckboxSetting
     }
     
     
-    //add script
+    /**
+	 * スクリプトの追加
+	 */
 	public function admin_enqueue_scripts()
 	{
 		$dir = 'dist';
@@ -37,7 +38,9 @@ class CategoryCheckboxSetting
 	}
 	
 	
-	//
+	/**
+	 * カテゴリの選択ボックス階層を維持
+	 */
 	public function wp_terms_checklist_args( $args, $post_id = null ) {
 	    $args['checked_ontop'] = false;
 	    return $args;		
